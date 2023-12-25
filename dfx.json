@@ -1,0 +1,13 @@
+{
+  "canisters": {
+    "wordle": {
+      "main": "src/index.ts",
+      "type": "custom",
+      "build": "npx azle wordle",
+      "root": "src",
+      "ts": "src/index.ts",
+      "candid": "src/index.did",
+      "wasm": ".azle/wordle/wordle.wasm.gz"
+    }
+  }
+}

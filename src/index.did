@@ -1,0 +1,26 @@
+type GameHistoryElement = record {
+  id : text;
+  status : text;
+  format_date : text;
+  timestamp : nat64;
+};
+type _AzleResult = variant { Ok : vec historyItem; Err : text };
+type _AzleResult_1 = variant { Ok : vec GameHistoryElement; Err : text };
+type _AzleResult_2 = variant { Ok : text; Err : text };
+type historyItem = record {
+  id : text;
+  format_date : text;
+  body : text;
+  game_id : text;
+  timestamp : nat64;
+};
+service : () -> {
+  currentGameHistory : () -> (_AzleResult) query;
+  gamesHistoryList : () -> (_AzleResult_1) query;
+  guess : (text) -> (_AzleResult_2);
+  removeHistory : () -> ();
+  rules : () -> (_AzleResult_2) query;
+  specificGameHistory : (text) -> (_AzleResult) query;
+  start : (nat8, nat8) -> (_AzleResult_2);
+  triesLeft : () -> (_AzleResult_2) query;
+}
