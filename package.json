@@ -1,11 +1,11 @@
 {
   "name": "icp_wordle_contract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {
     "@dfinity/agent": "^0.19.2",
     "@dfinity/candid": "^0.19.2",
-    "azle": "^0.18.6",
+    "azle": "^0.17.1",
     "uuid": "^9.0.0"
   },
   "engines": {
